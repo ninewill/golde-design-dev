@@ -82,6 +82,7 @@ body {
 
 .wrap {
   margin: 0 auto;
+	padding-top: 17rem;
 }
 
 .wrap-content {

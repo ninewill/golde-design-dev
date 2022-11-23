@@ -1,6 +1,6 @@
 <template>
   <!--header-->
-  <header id="header">
+  <header class="nav-down">
     <div class="mainheader">
       <div class="side-left">
         <div class="logo">
@@ -30,7 +30,9 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {
+ 
+  },
 };
 </script>
 
@@ -43,21 +45,30 @@ export default {
 // * HEADER 區塊
 // * ==========================================================================
 
-#header {
+header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
   width: 100%;
-  padding: 15px 16px;
+  //padding: 15px 16px;
+  transition: top 0.2s ease-in-out;
 
   @include min-width(768px) {
-    padding: 32px 20px;
+    //padding: 32px 20px;
   }
 
   @include min-width(1025px) {
-    padding: 32px 60px;
+    //padding: 32px 60px;
   }
 
   @include min-width(1440px) {
-    padding: 64px 120px;
+    //padding: 64px 120px;
+		padding-top: 64px;
   }
+}
+
+.nav-up {
+  top: -154px;
 }
 
 .mainheader {
@@ -144,7 +155,7 @@ export default {
   }
 
   .test-link {
-		margin-left: 176px;
+    margin-left: 176px;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.2) 0%,

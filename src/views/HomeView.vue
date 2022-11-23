@@ -48,18 +48,16 @@ export default {
 @import "@/assets/scss/main.scss";
 @import "@/assets/scss/grid.scss";
 
+.wrap{
+	height: 5000px;
+}
+
 .section-block {
   width: calc(100% - 40px);
   margin: 0 auto;
-  margin-top: 3rem;
-
-  &:nth-child(1) {
-    margin-top: 0;
-  }
 
   @include min-width(768px) {
     width: calc(100% - 80px);
-    margin-top: 5rem;
   }
 
   @include min-width(1024px) {
@@ -89,15 +87,16 @@ export default {
 }
 
 .s1 {
-  height: 5000px;
+
 
   .s1-wrap {
     .s1-txt {
 			margin-bottom: 3rem;
       color: $color-white;
 			line-height: 1;
-			letter-spacing: 5px;
-      font-size: 5.1vw;
+			letter-spacing: 0.05em;
+      font-size: 5.6vw;
+			text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 			font-family: 'Michroma', sans-serif;
 
 			&:last-child{
