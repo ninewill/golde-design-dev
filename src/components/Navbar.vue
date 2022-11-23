@@ -30,9 +30,7 @@
 
 <script>
 export default {
-  mounted() {
- 
-  },
+  mounted() {},
 };
 </script>
 
@@ -54,16 +52,16 @@ header {
   transition: top 0.2s ease-in-out;
 
   @include min-width(768px) {
-    //padding: 32px 20px;
+    padding: 32px 20px;
   }
 
   @include min-width(1025px) {
-    //padding: 32px 60px;
+    padding: 32px 60px;
   }
 
   @include min-width(1440px) {
     //padding: 64px 120px;
-		padding-top: 64px;
+    padding-top: 64px;
   }
 }
 
@@ -150,6 +148,13 @@ header {
       > a {
         display: block;
         color: $color-white;
+				transition: 0.2s;
+
+        @include min-width(1025px) {
+          &:hover {
+            text-shadow: 0px 0px 12px #ffffff;
+          }
+        }
       }
     }
   }
