@@ -1,0 +1,52 @@
+// * ==========================================================================
+// * 設定格狀版型排列規則
+// * ==========================================================================
+.c-align {
+	padding-left: 0;
+	margin-bottom: 2rem;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+  @include min-width(768px) {
+		margin-bottom: 5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    // 圖片在左
+    &.c-align-left {
+      flex-direction: row;
+    }
+
+    // 圖片在右
+    &.c-align-right {
+      flex-direction: row-reverse;
+    }
+
+    // 垂直置中
+    &.c-align-h-center {
+      align-items: center;
+    }
+  }
+
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4 {
+    margin-top: 0px;
+  }
+}
+
+
