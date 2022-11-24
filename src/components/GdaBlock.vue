@@ -45,6 +45,13 @@
         </div>
       </div>
     </div>
+    <div class="map">
+      <iframe
+        src="https://api.mapbox.com/styles/v1/by19950131/clakpimwp000515s5hhky9goe.html?title=false&access_token=pk.eyJ1IjoiYnkxOTk1MDEzMSIsImEiOiJja2JpeG5jc2QwaHRhMnF0ZGhhMGxjeW41In0.AECZoItrQh71Aj5HmDCU4A&zoomwheel=false#17.85/25.03986/121.507059/-28.8/38"
+        title="Monochrome"
+        style="border: none"
+      ></iframe>
+    </div>
   </div>
 </template>
 
@@ -93,7 +100,7 @@ export default {
       width: 50%;
 
       &.blur {
-				padding: 24px;
+        padding: 24px;
         background: linear-gradient(
           180deg,
           rgba(255, 255, 255, 0.3) 0%,
@@ -108,12 +115,12 @@ export default {
         text-align: left;
         display: block;
         color: $color-white;
-				font-size: 0.8vw;
+        font-size: 0.8vw;
       }
 
       > .h4 {
-				margin-top: 1rem;
-				letter-spacing: 0.1em;
+        margin-top: 1rem;
+        letter-spacing: 0.1em;
         font-size: 2.3vw;
         color: $color-white;
         font-family: "Michroma", sans-serif;
@@ -185,6 +192,23 @@ export default {
     > .h3 {
       color: $color-white;
       font-size: 1.3vw;
+    }
+  }
+
+  .map {
+    margin-top: 80px;
+    padding: 24px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(32.5px);
+
+    > iframe {
+      width: 100%;
+      height: 600px;
     }
   }
 }
