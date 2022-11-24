@@ -1,0 +1,191 @@
+<template>
+  <!--header-->
+  <div class="gda">
+    <div class="s3-title">
+      <span>5th GDA 頒獎典禮</span>
+      <h3 class="h3 h3-en">CEREMONY</h3>
+    </div>
+    <div class="s3-w-100">
+      <div class="s3-w-50">
+        <div class="s3-w-50-img s3-img-l">
+          <img src="https://dummyimage.com/601x524/#e9ebee/000" alt="" />
+        </div>
+      </div>
+      <div class="s3-w-50 s3-w-50-r">
+        <div class="s3-w-50-info-wrap">
+          <div class="s3-w-50-info">
+            <h3 class="h3">赫綵學員設計競賽</h3>
+            <p>
+              赫綵設計學院為學員所開辦的設計競賽項目，設立八大設計類別：企業形象設計、廣告海報設計、數位繪畫、攝影、網頁及
+              UI設計、影視動畫、App
+              遊戲、空間設計專案，為鼓勵學員踴躍投稿、挑戰自我設計極限，提供每一類別豐富且優越的獎勵條件。
+            </p>
+          </div>
+          <div class="s3-w-50-info">
+            <h3 class="h3">TOPRO盃 - 和平</h3>
+            <p>
+              自第四屆金赫獎起開辦「To
+              Pro盃」，公開徵選傑出設計創作，廣邀台灣各地及赫綵設計學院之國際姐妹校的優秀設計人士共同參與競賽。今年度以「無設限」視覺主軸，象徵設計並無所謂的極限，亦沒有所謂好設計與壞設計之差，並以「和平
+              Peace」作為徵件主題，用設計闡述個人對社會議題的觀點。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="awards">
+      <h3 class="h3">本次頒獎典禮 憑邀請信件入場參加</h3>
+      <div class="s3-w-100">
+        <div class="s3-w-50 blur">
+          <span>頒獎典禮 時間</span>
+          <h4 class="h4">12.10 (Sat.) 13:00</h4>
+        </div>
+        <div class="s3-w-50 blur">
+          <span>頒獎典禮 地點</span>
+          <h4 class="h4 h4-ch">西本願寺樹心會館</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  mounted() {},
+};
+</script>
+
+<style lang="scss" scoped>
+@import "@/assets/scss/mixin.scss";
+@import "@/assets/scss/variables.scss";
+
+// * ==========================================================================
+// * HEADER 區塊
+// * ==========================================================================
+
+.gda {
+  .s3-title {
+    width: 750px;
+
+    > span {
+      display: block;
+      margin-bottom: 1.5rem;
+      line-height: 32px;
+      color: $color-white;
+    }
+    .h3 {
+      margin-bottom: 1.5rem;
+      color: $color-white;
+      font-size: 3.2vw;
+      font-family: "Michroma", sans-serif;
+
+      &.h3-ch {
+        font-weight: 700;
+        font-family: "Noto Serif TC", serif;
+      }
+    }
+  }
+
+  .s3-w-100 {
+    margin-top: 2rem;
+    display: flex;
+
+    .s3-w-50 {
+      width: 50%;
+
+      &.blur {
+				padding: 24px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(32.5px);
+      }
+
+      > span {
+        margin-top: 1rem;
+        text-align: left;
+        display: block;
+        color: $color-white;
+				font-size: 0.8vw;
+      }
+
+      > .h4 {
+				margin-top: 1rem;
+				letter-spacing: 0.1em;
+        font-size: 2.3vw;
+        color: $color-white;
+        font-family: "Michroma", sans-serif;
+
+        &.h4-ch {
+          font-weight: 700;
+          font-family: "Noto Serif TC", serif;
+        }
+      }
+
+      .s3-w-50-img {
+        > img {
+          width: 100%;
+        }
+        &.s3-img-l {
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      &.s3-w-50-r {
+        padding: 32px 16px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.02) 50.4%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        backdrop-filter: blur(32.5px);
+
+        .s3-w-50-info-wrap {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .s3-w-50-info {
+            > .h3 {
+              padding-bottom: 1rem;
+              color: $color-white;
+              border-bottom: 1px solid $color-white;
+              font-size: 2vw;
+            }
+            > p {
+              color: $color-white;
+              font-size: 1vw;
+              line-height: 32px;
+            }
+          }
+        }
+
+        &::after {
+          content: "";
+          width: 500px;
+          height: 432px;
+          position: absolute;
+          top: -350px;
+          left: -250px;
+          z-index: -1;
+          display: block;
+          background-image: url("@/assets/images/Visual/point_line_surface/2.png");
+        }
+      }
+    }
+  }
+
+  .awards {
+    margin-top: 125px;
+
+    > .h3 {
+      color: $color-white;
+      font-size: 1.3vw;
+    }
+  }
+}
+</style>

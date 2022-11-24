@@ -18,8 +18,12 @@
         </div>
       </div>
     </section>
-    <section class="section-block s2"></section>
-    <section class="section-block-3 s3"></section>
+    <section class="section-block s2">
+      <AboutBlock />
+    </section>
+    <section class="section-block s3">
+			<GdaBlock />
+		</section>
     <section class="section-block s4"></section>
     <section class="section-block s5"></section>
     <section class="section-block s6"></section>
@@ -30,12 +34,14 @@
 
 <script>
 // @ is an alias to /src
-import FormSingle from "@/components/FormSingle.vue";
+import AboutBlock from "@/components/AboutBlock.vue";
+import GdaBlock from "@/components/GdaBlock.vue";
 
 export default {
   name: "HomeView",
   components: {
-    FormSingle,
+    AboutBlock,
+		GdaBlock
   },
 };
 </script>
@@ -48,13 +54,14 @@ export default {
 @import "@/assets/scss/main.scss";
 @import "@/assets/scss/grid.scss";
 
-.wrap{
-	height: 5000px;
+.wrap {
+  height: 5000px;
 }
 
 .section-block {
   width: calc(100% - 40px);
   margin: 0 auto;
+  margin-bottom: 20rem;
 
   @include min-width(768px) {
     width: calc(100% - 80px);
@@ -87,39 +94,39 @@ export default {
 }
 
 .s1 {
-
-
   .s1-wrap {
     .s1-txt {
-			margin-bottom: 3rem;
+      margin-bottom: 3rem;
       color: $color-white;
-			line-height: 1;
-			letter-spacing: 0.05em;
+      line-height: 1;
+      letter-spacing: 0.05em;
       font-size: 5.6vw;
-			text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-			font-family: 'Michroma', sans-serif;
+      text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+      font-family: "Michroma", sans-serif;
 
-			&:last-child{
-				margin-bottom: 0;
-			}
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       &.flex {
-				display: flex;
-				align-items: flex-end;
+        display: flex;
+        align-items: flex-end;
 
         .s1-txtt {
-					margin-bottom: 0.5rem;
-					margin-left: 1rem;
+          margin-bottom: 0.5rem;
+          margin-left: 1rem;
 
           > span {
-						margin-top: 1rem;
+            margin-top: 1rem;
             display: block;
-						color: $color-white;
+            color: $color-white;
             font-size: 0.8vw;
           }
         }
       }
     }
   }
+}
+.s2 {
 }
 </style>
