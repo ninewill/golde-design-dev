@@ -1,5 +1,11 @@
 <template>
   <div class="sponsors-wrap">
+		<div class="sponsors-wrap-r-b" data-aos="fade-left">
+			<img src="@/assets/images/Visual/point_line_surface/1.png" alt="" />
+		</div>
+		<div class="sponsors-wrap-l-b" data-aos="fade-right">
+			<img src="@/assets/images/Visual/point_line_surface/4.png" alt="" />
+		</div>
     <div class="sponsors-left">
       <div class="sponsors-main-img">
         <img src="@/assets/images/gda/logo.svg" alt="" />
@@ -42,7 +48,9 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {
+		AOS.init();
+	},
 };
 </script>
 
@@ -60,29 +68,23 @@ export default {
   display: flex;
   margin: 0 auto;
 
-  &:after {
-    content: "";
+	.sponsors-wrap-r-b{
     width: 480px;
     height: 260px;
     position: absolute;
     top: -220px;
     right: -170px;
     z-index: -1;
-    display: block;
-    background-image: url("@/assets/images/Visual/point_line_surface/1.png");
-  }
+	}
 
-  &:before {
-		content: "";
+	.sponsors-wrap-l-b{
     width: 520px;
     height: 410px;
     position: absolute;
     bottom: -300px;
     left: -250px;
     z-index: -1;
-    display: block;
-    background-image: url("@/assets/images/Visual/point_line_surface/4.png");
-  }
+	}
 
   .sponsors-left {
     width: 33.33%;

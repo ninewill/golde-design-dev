@@ -50,6 +50,7 @@
   }
 
   .c-circle__def-text-cover {
+		pointer-events: none;
     overflow: hidden;
 
     .c-circle__def-text {

@@ -11,6 +11,9 @@
         </div>
       </div>
       <div class="s3-w-50 s3-w-50-r">
+        <div class="s3-w-50-r-b" data-aos="zoom-in">
+          <img src="@/assets/images/Visual/point_line_surface/2.png" alt="" />
+        </div>
         <div class="s3-w-50-info-wrap">
           <div class="s3-w-50-info">
             <h3 class="h3">赫綵學員設計競賽</h3>
@@ -56,7 +59,9 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {
+		AOS.init();
+	},
 };
 </script>
 
@@ -140,6 +145,7 @@ export default {
       }
 
       &.s3-w-50-r {
+				position: relative;
         padding: 35.5px;
         background: linear-gradient(
           180deg,
@@ -169,16 +175,17 @@ export default {
           }
         }
 
-        &::after {
-          content: "";
+        .s3-w-50-r-b {
           width: 500px;
           height: 432px;
           position: absolute;
           top: -350px;
           left: -250px;
           z-index: -1;
-          display: block;
-          background-image: url("@/assets/images/Visual/point_line_surface/2.png");
+
+          > img {
+            width: 100%;
+          }
         }
       }
     }

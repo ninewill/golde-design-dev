@@ -79,7 +79,9 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {
+		AOS.init();
+	},
 };
 </script>
 

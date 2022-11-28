@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <a href="#5" class="scroll">
+      <a href="#1" class="scroll">
         <svg
           class="c-circle__def-img c-circle__def-img__origin"
           viewBox="0 0 143 143"
@@ -84,8 +84,6 @@
     <section id="5" class="section-block s6">
 			<Sponsors />
 		</section>
-    <section class="section-block s7"></section>
-    <section class="section-block s8"></section>
   </div>
 </template>
 
@@ -118,7 +116,6 @@ export default {
       $(".scroll").addClass("is-hover-out");
 			e.stopPropagation();
     });
-
 		$(".scroll").click(function () {
       let target = this.hash,
         $target = $(target).offset().top;

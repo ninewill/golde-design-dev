@@ -7,6 +7,9 @@
         </div>
       </div>
       <div class="s4-w-50">
+				<div class="s4-w-50-b" data-aos="fade-down-left">
+					<img src="@/assets/images/Visual/point_line_surface/5.svg" alt="" />
+				</div>
         <div class="s4-title">
           <span class="subtitle">時線年度設計展</span>
           <h3 class="h3">EXHIBITION</h3>
@@ -29,7 +32,9 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {
+		AOS.init();
+	},
 };
 </script>
 
@@ -63,6 +68,15 @@ export default {
       width: 50%;
 			position: relative;
 
+			.s4-w-50-b{
+        width: 226px;
+        height: 227px;
+        position: absolute;
+        top: -100px;
+        right: -180px;
+        z-index: -1;
+			}
+
       .s4-title {
         margin-bottom: 56px;
 
@@ -88,18 +102,6 @@ export default {
         &:last-child {
           margin-bottom: 0;
         }
-      }
-
-      &:after {
-        content: "";
-        display: block;
-        width: 226px;
-        height: 227px;
-        position: absolute;
-        top: -100px;
-        right: -180px;
-        z-index: -1;
-        background-image: url("@/assets/images/Visual/point_line_surface/5.svg");
       }
     }
   }
