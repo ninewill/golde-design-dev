@@ -1,8 +1,7 @@
 <template>
-  <!--header-->
   <div class="gda">
     <div class="s3-title">
-      <span>5th GDA 頒獎典禮</span>
+      <span class="subtitle">5th GDA 頒獎典禮</span>
       <h3 class="h3 h3-en">CEREMONY</h3>
     </div>
     <div class="s3-w-100">
@@ -66,7 +65,7 @@ export default {
 @import "@/assets/scss/variables.scss";
 
 // * ==========================================================================
-// * HEADER 區塊
+// * Gda 區塊
 // * ==========================================================================
 
 .gda {
@@ -74,7 +73,6 @@ export default {
     width: 750px;
 
     > span {
-      display: block;
       margin-bottom: 1.5rem;
       line-height: 32px;
       color: $color-white;
@@ -142,7 +140,7 @@ export default {
       }
 
       &.s3-w-50-r {
-        padding: 32px 16px;
+        padding: 35.5px;
         background: linear-gradient(
           180deg,
           rgba(255, 255, 255, 0.1) 0%,

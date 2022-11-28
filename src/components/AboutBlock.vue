@@ -1,8 +1,7 @@
 <template>
-  <!--header-->
 	<div class="about">
 		<div class="s2-title">
-        <span>ABOUT 金赫獎年度設計競賽</span>
+        <span class="subtitle">ABOUT 金赫獎年度設計競賽</span>
         <h3 class="h3 h3-en">Golden Design Award</h3>
         <h3 class="h3 h3-ch">追尋 實現夢想的軌跡。</h3>
         <span
@@ -37,7 +36,7 @@ export default {
 @import "@/assets/scss/variables.scss";
 
 // * ==========================================================================
-// * HEADER 區塊
+// * About 區塊
 // * ==========================================================================
 
 .about {
@@ -45,7 +44,6 @@ export default {
     width: 750px;
 
     > span {
-      display: block;
       margin-bottom: 1.5rem;
       line-height: 32px;
       color: $color-white;

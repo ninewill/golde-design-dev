@@ -17,16 +17,73 @@
           </div>
         </div>
       </div>
+      <a href="#5" class="scroll">
+        <svg
+          class="c-circle__def-img c-circle__def-img__origin"
+          viewBox="0 0 143 143"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            opacity=".5"
+            cx="71.5"
+            cy="71.5"
+            r="71"
+            stroke="#fff"
+          ></circle>
+        </svg>
+        <svg
+          class="c-circle__def-img c-circle__def-img__dammy"
+          viewBox="0 0 143 143"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle opacity="1" cx="71.5" cy="71.5" r="71" stroke="#fff"></circle>
+        </svg>
+        <span class="c-circle__def-text-cover">
+          <span
+            class="
+              js-hover__text__translateY
+              c-circle__def-text
+              p-top-philosophy__link-text
+            "
+          >
+            <span
+              class="
+                js-hover__text__translateY-inside
+                p-top-philosophy__link-text-inside
+              "
+            >
+              scroll
+            </span>
+            <span
+              class="
+                js-hover__text__translateY-inside__dammy
+                p-top-philosophy__link-text-inside__dammy
+              "
+              aria-hidden="true"
+            >
+              SCROLL
+            </span>
+          </span>
+        </span>
+      </a>
     </section>
-    <section class="section-block s2">
+    <section id="1" class="section-block s2">
       <AboutBlock />
     </section>
-    <section class="section-block s3">
-			<GdaBlock />
+    <section id="2" class="section-block s3">
+      <GdaBlock />
+    </section>
+    <section id="3" class="section-block s4">
+      <DayLine />
+    </section>
+    <section id="4" class="section-block s5">
+      <Info />
+    </section>
+    <section id="5" class="section-block s6">
+			<Sponsors />
 		</section>
-    <section class="section-block s4"></section>
-    <section class="section-block s5"></section>
-    <section class="section-block s6"></section>
     <section class="section-block s7"></section>
     <section class="section-block s8"></section>
   </div>
@@ -36,12 +93,38 @@
 // @ is an alias to /src
 import AboutBlock from "@/components/AboutBlock.vue";
 import GdaBlock from "@/components/GdaBlock.vue";
+import DayLine from "@/components/DayLine.vue";
+import Info from "@/components/Info.vue";
+import Sponsors from "@/components/Sponsors.vue";
 
 export default {
   name: "HomeView",
   components: {
     AboutBlock,
-		GdaBlock
+    GdaBlock,
+    DayLine,
+    Info,
+		Sponsors,
+  },
+
+  mounted() {
+    $(".scroll").mouseover(function (e) {
+      $(".scroll").removeClass("is-hover-out");
+      $(".scroll").addClass("is-hover");
+			e.stopPropagation();
+    });
+    $(".scroll").mouseout(function (e) {
+      $(".scroll").removeClass("is-hover");
+      $(".scroll").addClass("is-hover-out");
+			e.stopPropagation();
+    });
+
+		$(".scroll").click(function () {
+      let target = this.hash,
+        $target = $(target).offset().top;
+
+      $("html, body").animate({ scrollTop: $target }), 1000;
+    });
   },
 };
 </script>
@@ -53,10 +136,7 @@ export default {
 @import "@/assets/scss/reset.scss";
 @import "@/assets/scss/main.scss";
 @import "@/assets/scss/grid.scss";
-
-.wrap {
-  height: 5000px;
-}
+@import "@/assets/scss/animate.scss";
 
 .section-block {
   width: calc(100% - 40px);
@@ -82,6 +162,18 @@ export default {
   &:first-child {
     margin-top: 0;
   }
+
+	&.s1 {
+    margin-bottom: 2rem;
+  }
+
+  &.s3 {
+    margin-bottom: 9.0625rem;
+  }
+
+  &.s4 {
+    margin-bottom: 9.0625rem;
+  }
 }
 
 #myVideo {
@@ -94,6 +186,8 @@ export default {
 }
 
 .s1 {
+  position: relative;
+
   .s1-wrap {
     .s1-txt {
       margin-bottom: 3rem;
@@ -127,6 +221,23 @@ export default {
     }
   }
 }
-.s2 {
+
+.subtitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(32.5px);
+  }
 }
 </style>

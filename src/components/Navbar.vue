@@ -14,14 +14,14 @@
         </div>
       </div>
       <div class="side-right">
-        <ul>
-          <li><a href="javascript:;">關於金赫獎</a></li>
-          <li><a href="javascript:;">5th 頒獎典禮</a></li>
-          <li><a href="javascript:;">時線設計展</a></li>
-          <li><a href="javascript:;">時線活動</a></li>
+        <ul class="menu">
+          <li><a href="#1">關於金赫獎</a></li>
+          <li><a href="#2">5th 頒獎典禮</a></li>
+          <li><a href="#3">時線設計展</a></li>
+          <li><a href="#4">時線活動</a></li>
         </ul>
         <div class="test-link">
-          <a href="javascript:;">測驗</a>
+          <a href="#5">測驗</a>
         </div>
       </div>
     </div>
@@ -30,7 +30,15 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {
+    $('.menu li a[href^="#"]').click(function () {
+      let target = this.hash,
+        $target = $(target).offset().top;
+      console.log(target, $target);
+
+      $("html, body").animate({ scrollTop: $target }), 1500;
+    });
+  },
 };
 </script>
 
@@ -148,7 +156,8 @@ header {
       > a {
         display: block;
         color: $color-white;
-				transition: 0.2s;
+				text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+        transition: 0.2s;
 
         @include min-width(1025px) {
           &:hover {
