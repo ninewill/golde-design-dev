@@ -1,7 +1,7 @@
 <template>
   <!--header-->
   <header class="nav-down">
-    <div class="mainheader">
+    <div class="main-header">
       <div class="side-left">
         <div class="logo">
           <a
@@ -77,7 +77,7 @@ header {
   top: -154px;
 }
 
-.mainheader {
+.main-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
