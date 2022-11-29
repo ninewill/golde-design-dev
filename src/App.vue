@@ -42,6 +42,10 @@ body {
   font-size: 1rem;
   font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif, Arial, Helvetica;
   letter-spacing: 0.5px;
+
+	&.hidden{
+		overflow: hidden;
+	}
 }
 
 // * ==========================================================================
