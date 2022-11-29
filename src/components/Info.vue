@@ -94,7 +94,7 @@ export default {
 // * ==========================================================================
 
 .info {
-  @include min-width(1024px) {
+  @include min-width(1025px) {
     .s5-w-100 {
       margin-bottom: 13.75rem;
       display: flex;
@@ -115,7 +115,6 @@ export default {
         width: 35%;
         .s5-title {
           > span {
-            margin-bottom: 1.5rem;
             line-height: 32px;
             color: $color-white;
           }

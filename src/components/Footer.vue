@@ -66,7 +66,7 @@ export default {};
     width: calc(100% - 80px);
   }
 
-  @include min-width(1024px) {
+  @include min-width(1025px) {
     width: 935px;
     display: flex;
     align-items: flex-end;

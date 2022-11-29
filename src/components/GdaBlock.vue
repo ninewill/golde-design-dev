@@ -60,8 +60,8 @@
 <script>
 export default {
   mounted() {
-		AOS.init();
-	},
+    AOS.init();
+  },
 };
 </script>
 
@@ -78,15 +78,18 @@ export default {
     width: 750px;
 
     > span {
-      margin-bottom: 1.5rem;
       line-height: 32px;
       color: $color-white;
     }
     .h3 {
       margin-bottom: 1.5rem;
       color: $color-white;
-      font-size: 3.2vw;
+      font-size: 36px;
       font-family: "Michroma", sans-serif;
+
+      @include min-width(1025px) {
+        font-size: 3.2vw;
+      }
 
       &.h3-ch {
         font-weight: 700;
@@ -97,10 +100,17 @@ export default {
 
   .s3-w-100 {
     margin-top: 2rem;
-    display: flex;
+
+    @include min-width(1025px) {
+      display: flex;
+    }
 
     .s3-w-50 {
-      width: 50%;
+      width: 100%;
+
+      @include min-width(1025px) {
+        width: 50%;
+      }
 
       &.blur {
         padding: 24px;
@@ -118,15 +128,23 @@ export default {
         text-align: left;
         display: block;
         color: $color-white;
-        font-size: 0.8vw;
+        font-size: 14px;
+
+        @include min-width(1025px) {
+          font-size: 0.8vw;
+        }
       }
 
       > .h4 {
         margin-top: 1rem;
         letter-spacing: 0.1em;
-        font-size: 2.3vw;
+        font-size: 26px;
         color: $color-white;
         font-family: "Michroma", sans-serif;
+
+        @include min-width(1025px) {
+          font-size: 2.3vw;
+        }
 
         &.h4-ch {
           font-weight: 700;
@@ -145,7 +163,7 @@ export default {
       }
 
       &.s3-w-50-r {
-				position: relative;
+        position: relative;
         padding: 35.5px;
         background: linear-gradient(
           180deg,
@@ -165,23 +183,36 @@ export default {
               padding-bottom: 1rem;
               color: $color-white;
               border-bottom: 1px solid $color-white;
-              font-size: 2vw;
+              font-size: 30px;
+
+              @include min-width(1025px) {
+                font-size: 2vw;
+              }
             }
             > p {
               color: $color-white;
-              font-size: 1vw;
+              font-size: 14px;
               line-height: 32px;
+
+              @include min-width(1025px) {
+                font-size: 1vw;
+              }
             }
           }
         }
 
         .s3-w-50-r-b {
-          width: 500px;
-          height: 432px;
-          position: absolute;
-          top: -350px;
-          left: -250px;
-          z-index: -1;
+          display: none;
+
+          @include min-width(1025px) {
+            width: 500px;
+            height: 432px;
+            display: block;
+            position: absolute;
+            top: -350px;
+            left: -250px;
+            z-index: -1;
+          }
 
           > img {
             width: 100%;
@@ -196,7 +227,13 @@ export default {
 
     > .h3 {
       color: $color-white;
-      font-size: 1.3vw;
+      font-size: 18px;
+      text-align: center;
+
+      @include min-width(1025px) {
+        font-size: 1.3vw;
+        text-align: left;
+      }
     }
   }
 
@@ -213,7 +250,11 @@ export default {
 
     > iframe {
       width: 100%;
-      height: 600px;
+      height: 400px;
+
+      @include min-width(1025px) {
+        height: 600px;
+      }
     }
   }
 }

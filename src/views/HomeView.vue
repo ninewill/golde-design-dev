@@ -82,8 +82,8 @@
       <Info />
     </section>
     <section id="5" class="section-block s6">
-			<Sponsors />
-		</section>
+      <Sponsors />
+    </section>
   </div>
 </template>
 
@@ -102,21 +102,21 @@ export default {
     GdaBlock,
     DayLine,
     Info,
-		Sponsors,
+    Sponsors,
   },
 
   mounted() {
     $(".scroll").mouseover(function (e) {
       $(".scroll").removeClass("is-hover-out");
       $(".scroll").addClass("is-hover");
-			e.stopPropagation();
+      e.stopPropagation();
     });
     $(".scroll").mouseout(function (e) {
       $(".scroll").removeClass("is-hover");
       $(".scroll").addClass("is-hover-out");
-			e.stopPropagation();
+      e.stopPropagation();
     });
-		$(".scroll").click(function () {
+    $(".scroll").click(function () {
       let target = this.hash,
         $target = $(target).offset().top;
 
@@ -138,14 +138,15 @@ export default {
 .section-block {
   width: calc(100% - 40px);
   margin: 0 auto;
-  margin-bottom: 20rem;
+	margin-bottom: 10rem;
 
   @include min-width(768px) {
     width: calc(100% - 80px);
   }
 
-  @include min-width(1024px) {
+  @include min-width(1025px) {
     width: 935px;
+		margin-bottom: 20rem;
   }
 
   @include min-width(1440px) {
@@ -160,7 +161,7 @@ export default {
     margin-top: 0;
   }
 
-	&.s1 {
+  &.s1 {
     margin-bottom: 2rem;
   }
 
@@ -187,7 +188,7 @@ export default {
 
   .s1-wrap {
     .s1-txt {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
       color: $color-white;
       line-height: 1;
       letter-spacing: 0.05em;
@@ -195,23 +196,36 @@ export default {
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
       font-family: "Michroma", sans-serif;
 
+			@include min-width(1025px) {
+				margin-bottom: 3rem;
+			}
+
       &:last-child {
         margin-bottom: 0;
       }
 
       &.flex {
-        display: flex;
-        align-items: flex-end;
+        @include min-width(1025px) {
+          display: flex;
+          align-items: flex-end;
+        }
 
         .s1-txtt {
           margin-bottom: 0.5rem;
-          margin-left: 1rem;
+
+					@include min-width(1025px) {
+						margin-left: 1rem;
+					}
 
           > span {
             margin-top: 1rem;
             display: block;
             color: $color-white;
-            font-size: 0.8vw;
+            font-size: 16px;
+
+						@include min-width(1025px) {
+							font-size: 0.8vw;
+						}
           }
         }
       }
@@ -224,6 +238,11 @@ export default {
   display: flex;
   align-items: center;
   padding-left: 1rem;
+	margin-bottom: 8px;
+
+	@include min-width(1025px) {
+		margin-bottom: 1.5rem;
+	}
 
   &:before {
     content: "";

@@ -86,7 +86,11 @@ body {
 
 .wrap {
   margin: 0 auto;
-	padding-top: 17rem;
+	padding-top: 150px;
+
+	@include min-width(1025px) {
+		padding-top: 17rem;
+	}
 }
 
 .wrap-content {

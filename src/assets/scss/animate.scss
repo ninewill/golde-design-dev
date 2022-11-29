@@ -3,8 +3,8 @@
 // * ==========================================================================
 
 .scroll {
-  width: 11.9791666667vw;
-  height: 11.9791666667vw;
+  width: 130px;
+  height: 130px;
 	margin-right: 0;
 	margin-left: auto;
   position: relative;
@@ -18,10 +18,13 @@
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-
   backdrop-filter: blur(32.5px);
 
-  @include min-width(1024px) {
+  @include min-width(1025px) {
+		width: 11.9791666667vw;
+		height: 11.9791666667vw;
+
+
     &:hover {
       outline: 0;
     }

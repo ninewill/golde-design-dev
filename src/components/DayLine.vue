@@ -81,7 +81,6 @@ export default {
         margin-bottom: 56px;
 
         > span {
-          margin-bottom: 1.5rem;
           line-height: 32px;
           color: $color-white;
         }

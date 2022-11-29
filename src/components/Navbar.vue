@@ -144,7 +144,7 @@ header {
   width: 85%;
   //position: relative;
 
-  @include min-width(1024px) {
+  @include min-width(1025px) {
     width: auto;
   }
   .menu-wrap {
@@ -174,7 +174,7 @@ header {
       left: 20%;
     }
 
-    @include min-width(1024px) {
+    @include min-width(1025px) {
       width: 100%;
 			padding-top: 0;
 			padding-left: 0;
@@ -194,7 +194,7 @@ header {
       align-items: flex-start;
       flex-direction: column;
 
-      @include min-width(1024px) {
+      @include min-width(1025px) {
 				align-items: center;
         flex-direction: row;
       }
@@ -202,7 +202,7 @@ header {
       > li {
 				margin-bottom: 50px;
 
-        @include min-width(1024px) {
+        @include min-width(1025px) {
 					margin-bottom: 0;
           margin-right: 32px;
         }
@@ -258,7 +258,7 @@ header {
     z-index: 999;
     cursor: pointer;
 
-    @include min-width(1024px) {
+    @include min-width(1025px) {
       display: none;
     }
 

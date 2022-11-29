@@ -49,18 +49,25 @@ export default {
 
 .about {
   .s2-title {
-    width: 750px;
+    width: 100%;
+
+		@include min-width(1025px) {
+			width: 750px;
+		}
 
     > span {
-      margin-bottom: 1.5rem;
       line-height: 32px;
       color: $color-white;
     }
     .h3 {
       margin-bottom: 1.5rem;
       color: $color-white;
-      font-size: 3.2vw;
+      font-size: 36px;
       font-family: "Michroma", sans-serif;
+
+      @include min-width(1025px) {
+        font-size: 3.2vw;
+      }
 
       &.h3-ch {
         font-weight: 700;
@@ -70,16 +77,23 @@ export default {
   }
 
   .s2-w-100 {
-    margin-top: 158px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 40px;
+
+    @include min-width(1025px) {
+			margin-top: 158px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .s2-w-50 {
       position: relative;
 
       &:first-child {
-        margin-right: 105px;
+
+				@include min-width(1025px) {
+					margin-right: 105px;
+				}
       }
 
       > span {
@@ -87,18 +101,28 @@ export default {
         text-align: right;
         display: block;
         color: $color-white;
+				font-size: 12px;
+
+				@include min-width(1025px) {
+					font-size: 16px;
+				}
       }
 
       &.s2-w-50-l {
         position: relative;
 
         .s2-img-l-b {
-          width: 226px;
-          height: 227px;
-          position: absolute;
-          bottom: -250px;
-          left: -150px;
-          z-index: -1;
+          display: none;
+
+          @include min-width(1025px) {
+            width: 226px;
+            height: 227px;
+            display: block;
+            position: absolute;
+            bottom: -250px;
+            left: -150px;
+            z-index: -1;
+          }
 
           > img {
             width: 100%;
@@ -109,12 +133,17 @@ export default {
       &.s2-w-50-r {
         position: relative;
         .s2-img-r-b {
-          width: 480px;
-          height: 260px;
-          position: absolute;
-          top: -180px;
-          right: -200px;
-          z-index: -1;
+          display: none;
+
+          @include min-width(1025px) {
+            width: 480px;
+            height: 260px;
+            display: block;
+            position: absolute;
+            top: -180px;
+            right: -200px;
+            z-index: -1;
+          }
 
           > img {
             width: 100%;
@@ -124,6 +153,30 @@ export default {
 
       .s2-w-50-img {
         position: relative;
+
+        &.s2-img-l {
+          width: 195px;
+
+          @include min-width(1025px) {
+            width: auto;
+          }
+        }
+
+        &.s2-img-r {
+          width: 251px;
+          margin-top: 40px;
+					margin-right: 0;
+					margin-left: auto;
+
+          @include min-width(1025px) {
+            width: auto;
+            margin-top: 0;
+          }
+        }
+
+        > img {
+          width: 100%;
+        }
       }
     }
   }
