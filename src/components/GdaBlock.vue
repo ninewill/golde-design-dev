@@ -75,7 +75,11 @@ export default {
 
 .gda {
   .s3-title {
-    width: 750px;
+    width: 100%;
+
+    @include min-width(1025px) {
+      width: 750px;
+    }
 
     > span {
       line-height: 32px;

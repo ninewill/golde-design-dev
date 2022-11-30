@@ -86,7 +86,12 @@ export default {};
       width: 146px;
       height: 30px;
       display: block;
-			position: relative;
+      position: relative;
+      margin-bottom: 25px;
+
+      @include min-width(1025px) {
+        margin-bottom: 0;
+      }
 
       > a {
         width: 100%;
@@ -119,6 +124,12 @@ export default {};
   }
 
   .f-right {
+    margin-top: 65px;
+
+    @include min-width(1025px) {
+      margin-top: 0;
+    }
+
     > p {
       margin-bottom: 0;
       color: $color-white;

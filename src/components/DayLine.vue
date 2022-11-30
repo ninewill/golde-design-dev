@@ -7,9 +7,9 @@
         </div>
       </div>
       <div class="s4-w-50">
-				<div class="s4-w-50-b" data-aos="fade-down-left">
-					<img src="@/assets/images/Visual/point_line_surface/5.svg" alt="" />
-				</div>
+        <div class="s4-w-50-b" data-aos="fade-down-left">
+          <img src="@/assets/images/Visual/point_line_surface/5.svg" alt="" />
+        </div>
         <div class="s4-title">
           <span class="subtitle">時線年度設計展</span>
           <h3 class="h3">EXHIBITION</h3>
@@ -33,8 +33,8 @@
 <script>
 export default {
   mounted() {
-		AOS.init();
-	},
+    AOS.init();
+  },
 };
 </script>
 
@@ -49,15 +49,29 @@ export default {
 .dayline {
   .s4-w-100 {
     margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    @include min-width(1025px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .s4-w-20 {
-      width: 20%;
-      margin-right: 155px;
+      width: 100%;
+
+      @include min-width(1025px) {
+        width: 20%;
+        margin-right: 155px;
+      }
 
       .s4-img {
+				width: 258px;
+				margin: 0 auto;
+
+				@include min-width(1025px) {
+					width: auto;
+				}
+
         > img {
           width: 100%;
         }
@@ -65,20 +79,33 @@ export default {
     }
 
     .s4-w-50 {
-      width: 50%;
-			position: relative;
+      position: relative;
 
-			.s4-w-50-b{
-        width: 226px;
-        height: 227px;
-        position: absolute;
-        top: -100px;
-        right: -180px;
-        z-index: -1;
-			}
+      @include min-width(1025px) {
+        width: 50%;
+      }
+
+      .s4-w-50-b {
+        display: none;
+
+        @include min-width(1025px) {
+          width: 226px;
+          height: 227px;
+          display: block;
+          position: absolute;
+          top: -100px;
+          right: -180px;
+          z-index: -1;
+        }
+      }
 
       .s4-title {
+				margin-top: 80px;
         margin-bottom: 56px;
+
+        @include min-width(1025px) {
+          margin-top: 0;
+        }
 
         > span {
           line-height: 32px;
@@ -88,15 +115,24 @@ export default {
         .h3 {
           margin-bottom: 1.5rem;
           color: $color-white;
-          font-size: 3.2vw;
+          font-size: 36px;
           font-family: "Michroma", sans-serif;
+
+          @include min-width(1025px) {
+            font-size: 3.2vw;
+          }
         }
       }
 
       > p {
         margin-bottom: 3rem;
         line-height: 32px;
+				font-size: 14px;
         color: $color-white;
+
+				@include min-width(1025px) {
+					font-size: 16px;
+				}
 
         &:last-child {
           margin-bottom: 0;

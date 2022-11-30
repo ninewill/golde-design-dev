@@ -80,8 +80,8 @@
 <script>
 export default {
   mounted() {
-		AOS.init();
-	},
+    AOS.init();
+  },
 };
 </script>
 
@@ -94,79 +94,122 @@ export default {
 // * ==========================================================================
 
 .info {
-  @include min-width(1025px) {
-    .s5-w-100 {
-      margin-bottom: 13.75rem;
+  .s5-w-100 {
+    margin-bottom: 13.75rem;
+
+    @include min-width(1025px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
 
-      // 圖片在右
-      &.align-left {
-        flex-direction: row;
-      }
+    // 圖片在右
+    &.align-left {
+      flex-direction: row;
+    }
 
-      // 圖片在左
-      &.align-right {
-        flex-direction: row-reverse;
-      }
+    // 圖片在左
+    &.align-right {
+      flex-direction: row-reverse;
+    }
 
-      .info-txt {
+    .info-txt {
+      width: 100%;
+
+      @include min-width(1025px) {
         width: 35%;
-        .s5-title {
-          > span {
-            line-height: 32px;
-            color: $color-white;
-          }
+      }
+      .s5-title {
+        > span {
+          line-height: 32px;
+          color: $color-white;
+        }
 
-          .h3 {
-            margin-bottom: 1.5rem;
-            color: $color-white;
+        .h3 {
+          margin-bottom: 1.5rem;
+          color: $color-white;
+          font-size: 36px;
+          font-family: "Michroma", sans-serif;
+
+          @include min-width(1025px) {
             font-size: 3.2vw;
-            font-family: "Michroma", sans-serif;
           }
         }
+      }
 
-        .s5-title-2 {
-          display: flex;
-          align-items: center;
-          .h4 {
+      .s5-title-2 {
+        display: flex;
+        align-items: center;
+        .h4 {
+          font-size: 30px;
+          color: $color-white;
+          margin-bottom: 0;
+
+          @include min-width(1025px) {
+            margin-bottom: 8px;
             font-size: 1.7vw;
-            color: $color-white;
-          }
-
-          .s5-title-2-img {
-            margin-left: 1rem;
-
-            > img {
-              width: 100%;
-            }
           }
         }
 
-        .s5-title-3 {
-          margin-top: 2rem;
-          .h4 {
-            margin-top: 0.8rem;
+        .s5-title-2-img {
+          margin-left: 1rem;
+
+          > img {
+            width: 100%;
+          }
+        }
+      }
+
+      .s5-title-3 {
+        margin-top: 2rem;
+        .h4 {
+          margin-top: 0.8rem;
+          font-size: 14px;
+          color: $color-white;
+
+          @include min-width(1025px) {
             font-size: 0.7vw;
-            color: $color-white;
           }
+        }
 
-          .s5-title-2-img {
+        .s5-title-2-img {
+          width: 60%;
+
+          @include min-width(1025px) {
             width: 50%;
+          }
 
-            > img {
-              width: 100%;
-            }
+          > img {
+            width: 100%;
           }
         }
+      }
 
-        .s5-title-4 {
-          margin-top: 2.75rem;
-          > p {
-            color: $color-white;
+      .s5-title-4 {
+        margin-top: 2.75rem;
+
+        > p {
+					margin-bottom: 0.5rem;
+          color: $color-white;
+
+          @include min-width(1025px) {
+            margin-bottom: 1rem;
           }
         }
+      }
+    }
+
+    .info-img {
+      width: 100%;
+			margin-top: 75px;
+
+      @include min-width(1025px) {
+        width: auto;
+				margin-top: 0;
+      }
+
+      > img {
+        width: 100%;
       }
     }
   }
