@@ -2,7 +2,7 @@
   <!--main-->
   <div id="main" class="wrap wrap-content">
     <!-- The video -->
-    <video autoplay muted loop id="myVideo">
+    <video loop muted autoplay playsinline id="myVideo">
       <source src="@/assets/images/mp4/gold-design.mp4" type="video/mp4" />
     </video>
     <section class="section-block s1">
@@ -192,7 +192,7 @@ export default {
       color: $color-white;
       line-height: 1;
       letter-spacing: 0.05em;
-      font-size: 5.6vw;
+      font-size: 5vw;
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
       font-family: "Michroma", sans-serif;
 

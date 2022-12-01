@@ -4,6 +4,6 @@ module.exports = defineConfig({
 
 	//Build 路徑設定
 	publicPath: process.env.NODE_ENV === 'production'
-    ? '/Event/Photoshop-Master-James/'
+    ? '/'
     : '/'
 })

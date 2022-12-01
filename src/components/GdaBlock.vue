@@ -7,7 +7,7 @@
     <div class="s3-w-100">
       <div class="s3-w-50">
         <div class="s3-w-50-img s3-img-l">
-          <img src="https://dummyimage.com/601x524/#e9ebee/000" alt="" />
+          <img src="@/assets/images/Visual/visual-img/03.jpg" alt="" />
         </div>
       </div>
       <div class="s3-w-50 s3-w-50-r">
@@ -147,7 +147,7 @@ export default {
         font-family: "Michroma", sans-serif;
 
         @include min-width(1025px) {
-          font-size: 2.3vw;
+          font-size: 2.1vw;
         }
 
         &.h4-ch {
@@ -159,8 +159,11 @@ export default {
       .s3-w-50-img {
         > img {
           width: 100%;
+					height: 100%;
+					object-fit: cover;
         }
         &.s3-img-l {
+					height: 100%;
           position: relative;
           z-index: 1;
         }

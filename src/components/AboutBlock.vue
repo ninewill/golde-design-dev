@@ -15,7 +15,7 @@
           <img src="@/assets/images/Visual/point_line_surface/5.svg" alt="" />
         </div>
         <div class="s2-w-50-img s2-img-l">
-          <img src="https://dummyimage.com/372x446/#e9ebee/000" alt="" />
+          <img src="@/assets/images/Visual/visual-img/01.jpg" alt="" />
         </div>
       </div>
       <div class="s2-w-50 s2-w-50-r">
@@ -23,7 +23,7 @@
           <img src="@/assets/images/Visual/point_line_surface/3.png" alt="" />
         </div>
         <div class="s2-w-50-img s2-img-r">
-          <img src="https://dummyimage.com/470x618/#e9ebee/000" alt="" />
+          <img src="@/assets/images/Visual/visual-img/02.jpg" alt="" />
         </div>
         <span>4th 年度最佳設計 - 劉大維 / 放課後的革命</span>
       </div>
@@ -52,7 +52,7 @@ export default {
     width: 100%;
 
 		@include min-width(1025px) {
-			width: 750px;
+			width: 780px;
 		}
 
     > span {
@@ -157,8 +157,12 @@ export default {
         &.s2-img-l {
           width: 195px;
 
-          @include min-width(1025px) {
-            width: auto;
+					@include min-width(1025px) {
+						width: 250px;
+          }
+
+					@include min-width(1440px) {
+						width: 300px;
           }
         }
 
@@ -169,8 +173,12 @@ export default {
 					margin-left: auto;
 
           @include min-width(1025px) {
-            width: auto;
+						width: 306px;
             margin-top: 0;
+          }
+
+					@include min-width(1440px) {
+						width: 356px;
           }
         }
 
