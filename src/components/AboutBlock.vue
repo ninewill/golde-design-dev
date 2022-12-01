@@ -9,7 +9,7 @@
         耗時7年打造的國內設計獎項指標平台，目標推廣台灣設計藝術作品及新生代設計師。藉由《金赫獎》競賽光環以及最嚴謹的評審陣容、制度，為競賽遴選出最具發展潛力的設計藝術作品，更藉此機會為台灣設計創作產業共同努力，發掘新生代的明日之星、將台灣設計軟實力推向更開闊的國際舞台！</span
       >
     </div>
-    <div class="s2-w-100">
+    <div  class="s2-w-100">
       <div class="s2-w-50 s2-w-50-l">
         <div class="s2-img-l-b" data-aos="fade-down-left">
           <img src="@/assets/images/Visual/point_line_surface/5.svg" alt="" />
@@ -25,7 +25,7 @@
         <div class="s2-w-50-img s2-img-r">
           <img src="@/assets/images/Visual/visual-img/02.jpg" alt="" />
         </div>
-        <span>4th 年度最佳設計 - 劉大維 / 放課後的革命</span>
+        <span id="2">4th 年度最佳設計 - 劉大維 / 放課後的革命</span>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ export default {
     .h3 {
       margin-bottom: 1.5rem;
       color: $color-white;
-      font-size: 36px;
+      font-size: 32px;
       font-family: "Michroma", sans-serif;
 
       @include min-width(1025px) {

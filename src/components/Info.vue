@@ -96,14 +96,16 @@
         </div>
         <div class="s5-title-2">
           <p>
-            《時線 DAY LINE》聖誕週文創市集，集結來自不同領域的職人、創作者、斜槓青年，琳瑯滿目的文青雜貨、文創商品、聖誕點心，想要探索新的生活靈感，感受滿滿的聖誕氛圍，來逛12/24 的市集就對了！
+            《時線 DAY
+            LINE》聖誕週文創市集，集結來自不同領域的職人、創作者、斜槓青年，琳瑯滿目的文青雜貨、文創商品、聖誕點心，想要探索新的生活靈感，感受滿滿的聖誕氛圍，來逛12/24
+            的市集就對了！
           </p>
         </div>
         <div class="s5-title-3">
           <ul>
             <li>市集時間：12/24 (Sat.) 13:00 - 20:00</li>
             <li>市集地點：西本願寺樹心會館 戶外場域</li>
-						<li>活動內容：文創市集、手作體驗、闖關遊戲、戶外演出</li>
+            <li>活動內容：文創市集、手作體驗、闖關遊戲、戶外演出</li>
           </ul>
         </div>
       </div>
@@ -132,22 +134,27 @@ export default {
 
 .info {
   .s5-w-100 {
-    margin-bottom: 10.75rem;
+    margin-bottom: 5rem;
+    display: flex;
 
     @include min-width(1025px) {
       margin-bottom: 13.75rem;
-      display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .info-txt {
       width: 100%;
+			margin-top: 1rem;
+      padding-left: 1.5rem;
+      border-left: 2px solid rgba(255, 255, 255, 0.3);
+      order: 2;
 
       @include min-width(1025px) {
         width: 35%;
-        padding-left: 3rem;
-        border-left: 2px solid rgba(255, 255, 255, 0.3);
+				margin-top: 0;
+				padding-left: 3rem;
+        order: 1;
       }
       .s5-title {
         > span {
@@ -158,7 +165,7 @@ export default {
         .h3 {
           margin-bottom: 1.5rem;
           color: $color-white;
-          font-size: 36px;
+          font-size: 32px;
           font-family: "Michroma", sans-serif;
 
           @include min-width(1025px) {
@@ -253,12 +260,20 @@ export default {
 
     // 圖片在右
     &.align-left {
-      flex-direction: row;
+      flex-direction: column;
+
+      @include min-width(1025px) {
+        flex-direction: row;
+      }
     }
 
     // 圖片在左
     &.align-right {
-      flex-direction: row-reverse;
+      flex-direction: column;
+
+      @include min-width(1025px) {
+        flex-direction: row-reverse;
+      }
     }
 
     &.line {
@@ -285,12 +300,13 @@ export default {
 
     .info-img {
       width: 100%;
-      margin-top: 75px;
+      order: 1;
 
       @include min-width(1025px) {
         width: 60%;
         height: 100%;
         margin-top: 0;
+        order: 2;
       }
 
       > img {

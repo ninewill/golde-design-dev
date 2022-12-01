@@ -88,7 +88,7 @@ export default {
     .h3 {
       margin-bottom: 1.5rem;
       color: $color-white;
-      font-size: 36px;
+      font-size: 32px;
       font-family: "Michroma", sans-serif;
 
       @include min-width(1025px) {
@@ -142,7 +142,7 @@ export default {
       > .h4 {
         margin-top: 1rem;
         letter-spacing: 0.1em;
-        font-size: 26px;
+        font-size: 24px;
         color: $color-white;
         font-family: "Michroma", sans-serif;
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="dayline">
+  <div  class="dayline">
     <div class="s4-w-100">
       <div class="s4-w-20">
         <div class="s4-img">
@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="s4-w-50">
-        <div class="s4-w-50-b" data-aos="fade-down-left">
+        <div  class="s4-w-50-b" data-aos="fade-down-left">
           <img src="@/assets/images/Visual/point_line_surface/5.svg" alt="" />
         </div>
         <div class="s4-title">
@@ -20,7 +20,7 @@
           在學習亦或是創作的過程中流動、逐步實現心之所向
           每個人擁有著相同長度的1天、24小時、1440分鐘、86400秒
         </p>
-        <p>
+        <p id="4">
           赫綵宛如領航員、培育著每一個夢想成真的豐碩結果，而 時間
           是必須付出的多數成本，
           紀錄著最重要的軌跡，始終深信只要跟著軌跡前行，就能看見成功的剎那。
@@ -115,7 +115,7 @@ export default {
         .h3 {
           margin-bottom: 1.5rem;
           color: $color-white;
-          font-size: 36px;
+          font-size: 32px;
           font-family: "Michroma", sans-serif;
 
           @include min-width(1025px) {

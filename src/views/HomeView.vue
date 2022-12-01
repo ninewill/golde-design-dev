@@ -9,7 +9,7 @@
       <div class="s1-wrap">
         <div class="s1-txt">5TH GOLDEN</div>
         <div class="s1-txt">DESIGN AWARD</div>
-        <div class="s1-txt flex">
+        <div id="1" class="s1-txt flex">
           DAY-LINE
           <div class="s1-txtt">
             <span>第五屆金赫獎</span>
@@ -69,19 +69,19 @@
         </span>
       </a>
     </section>
-    <section id="1" class="section-block s2">
+    <section  class="section-block s2">
       <AboutBlock />
     </section>
-    <section id="2" class="section-block s3">
+    <section  class="section-block s3">
       <GdaBlock />
     </section>
-    <section id="3" class="section-block s4">
+    <section  id="3" class="section-block s4">
       <DayLine />
     </section>
-    <section id="4" class="section-block s5">
+    <section  class="section-block s5">
       <Info />
     </section>
-    <section id="5" class="section-block s6">
+    <section  class="section-block s6">
       <Sponsors />
     </section>
   </div>
@@ -138,7 +138,7 @@ export default {
 .section-block {
   width: calc(100% - 40px);
   margin: 0 auto;
-	margin-bottom: 10rem;
+  margin-bottom: 10rem;
 
   @include min-width(768px) {
     width: calc(100% - 80px);
@@ -146,7 +146,7 @@ export default {
 
   @include min-width(1025px) {
     width: 935px;
-		margin-bottom: 20rem;
+    margin-bottom: 20rem;
   }
 
   @include min-width(1440px) {
@@ -170,7 +170,11 @@ export default {
   }
 
   &.s4 {
-    margin-bottom: 9.0625rem;
+    margin-bottom: 6.25rem;
+
+    @include min-width(1025px) {
+      margin-bottom: 9.0625rem;
+    }
   }
 }
 
@@ -192,13 +196,14 @@ export default {
       color: $color-white;
       line-height: 1;
       letter-spacing: 0.05em;
-      font-size: 5vw;
+      font-size: 1.7rem;
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
       font-family: "Michroma", sans-serif;
 
-			@include min-width(1025px) {
-				margin-bottom: 3rem;
-			}
+      @include min-width(1025px) {
+        margin-bottom: 3rem;
+        font-size: 5vw;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -213,9 +218,9 @@ export default {
         .s1-txtt {
           margin-bottom: 0.5rem;
 
-					@include min-width(1025px) {
-						margin-left: 1rem;
-					}
+          @include min-width(1025px) {
+            margin-left: 1rem;
+          }
 
           > span {
             margin-top: 1rem;
@@ -223,9 +228,9 @@ export default {
             color: $color-white;
             font-size: 16px;
 
-						@include min-width(1025px) {
-							font-size: 0.8vw;
-						}
+            @include min-width(1025px) {
+              font-size: 0.8vw;
+            }
           }
         }
       }
@@ -238,11 +243,11 @@ export default {
   display: flex;
   align-items: center;
   padding-left: 1rem;
-	margin-bottom: 8px;
+  margin-bottom: 8px;
 
-	@include min-width(1025px) {
-		margin-bottom: 1.5rem;
-	}
+  @include min-width(1025px) {
+    margin-bottom: 1.5rem;
+  }
 
   &:before {
     content: "";
