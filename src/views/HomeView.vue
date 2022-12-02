@@ -9,7 +9,7 @@
       <div class="s1-wrap">
         <div class="s1-txt">5TH GOLDEN</div>
         <div class="s1-txt">DESIGN AWARD</div>
-        <div id="1" class="s1-txt flex">
+        <div class="s1-txt flex">
           DAY-LINE
           <div class="s1-txtt">
             <span>第五屆金赫獎</span>
@@ -68,6 +68,7 @@
           </span>
         </span>
       </a>
+			<div id="1" class="scroll-block"></div>
     </section>
     <section  class="section-block s2">
       <AboutBlock />
@@ -236,6 +237,11 @@ export default {
       }
     }
   }
+}
+
+.scroll-block{
+	width: 100%;
+	height: 1px;
 }
 
 .subtitle {

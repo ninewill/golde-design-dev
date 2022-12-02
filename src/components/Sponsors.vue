@@ -49,7 +49,9 @@
 <script>
 export default {
   mounted() {
-    AOS.init();
+    AOS.init({
+			delay: 300,
+		});
   },
 };
 </script>

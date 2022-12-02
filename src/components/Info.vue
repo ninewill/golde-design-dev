@@ -213,7 +213,8 @@ export default {
           list-style-type: disc;
 
           > li {
-            margin-bottom: 1rem;
+						margin-bottom: 1rem;
+						line-height: 32px;
             color: $color-white;
 
             &:last-child {
